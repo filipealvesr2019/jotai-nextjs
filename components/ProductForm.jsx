@@ -17,6 +17,8 @@ const ProductForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome" required/>
+            <input type="number" value={price} onChange={((e) => setPrice(e.target.value))} placeholder="Preço" required/>
+            <button type="submit">Adicionar Produto</button>
         </form>
     )
 }
