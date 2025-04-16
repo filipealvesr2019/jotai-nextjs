@@ -1,4 +1,4 @@
-import Image from "next/image";
+'use client';
 import styles from "./page.module.css";
 import { useProducts } from "../../hooks/useProducts";
 import ProductList from "../../components/ProductList";

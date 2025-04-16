@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 
 const ProductForm = () => {
@@ -6,7 +7,7 @@ const ProductForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch(`/api/products`, {
+        await fetch(`/api/routes/products`, {
             method: "POST",
             headers: {"Content-Type": "aplication/json"},
             body: JSON.stringify({name, price: Number(price)})

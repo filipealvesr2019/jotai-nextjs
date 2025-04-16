@@ -1,3 +1,5 @@
+
+"use client"
 const { useAtom } = require("jotai")
 const { productsAtom } = require("../store/store")
 
