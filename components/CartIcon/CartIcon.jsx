@@ -1,7 +1,8 @@
 "use client"
 
-import useAtom from "jotai"
+import {useAtom} from "jotai"
 import { cartCountAtom } from "../../store/store"
+import Link from "next/link";
 
 const CartIcon = () => {
     const [cartCount] = useAtom(cartCountAtom);
@@ -14,3 +15,5 @@ const CartIcon = () => {
         </Link>
     )
 }
+
+export default CartIcon;
