@@ -1,5 +1,6 @@
+
+import dbConnect from "../lib/mongodb";
 import Product from "../models/product";
-import dbConnect from "../mongodb";
 
 export default async function handler(req, res){
     await dbConnect();
