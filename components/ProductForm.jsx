@@ -9,7 +9,7 @@ const ProductForm = () => {
         e.preventDefault();
         await fetch(`/api/routes/products`, {
             method: "POST",
-            headers: {"Content-Type": "aplication/json"},
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({name, price: Number(price)})
         }),
         window.location.reload();
