@@ -1,11 +1,11 @@
 "use client"
 
 import {useAtom} from "jotai"
-import { cartCountAtom } from "../../store/store"
+import { cartAtom } from "../../store/store"
 import Link from "next/link";
 
 const CartIcon = () => {
-    const [cartCount] = useAtom(cartCountAtom);
+    const [cartCount] = useAtom(cartAtom);
 
     return (
         <Link href="/carrinho">
