@@ -1,0 +1,13 @@
+.CartCount{
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

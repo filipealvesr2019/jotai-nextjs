@@ -1,11 +1,11 @@
 "use client"
 
 import {useAtom} from "jotai"
-import { cartAtom } from "../../store/store"
+import { cartAtom, cartCountAtom } from "../../store/store"
 import Link from "next/link";
 import styles from './CartIcon.module.css'
 const CartIcon = () => {
-    const [cartCount] = useAtom(cartAtom);
+    const [cartCount] = useAtom(cartCountAtom);
 
     return (
         <Link href="/carrinho">
@@ -13,7 +13,7 @@ const CartIcon = () => {
             position: 'relative'
         }}>
         🛒
-        <span>
+        <span className={styles.CartCount}>
             {cartCount || 0}
         </span>
         </div>
