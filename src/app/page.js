@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
-      <ProductForm />
+      {/* <ProductForm /> */}
       <ProductList />
     </div>
   );
