@@ -1,5 +1,5 @@
 
-const componenteSeparado2 = () => {
+const ComponenteSeparado2 = () => {
    
     return (
        <div>
@@ -8,4 +8,4 @@ const componenteSeparado2 = () => {
     )
 }
 
-export default componenteSeparado2;
+export default ComponenteSeparado2;
