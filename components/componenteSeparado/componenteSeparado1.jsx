@@ -1,9 +1,13 @@
 import { useAtom } from "jotai";
-import { productsAtom } from "../../store/store";
+import { cartAtom, productsAtom } from "../../store/store";
 
 const ComponenteSeparado1 = () => {
   const [products] = useAtom(productsAtom);
+  const [, setCart] = useAtom(cartAtom)
 
+  const addToCart = (product) => {
+    setCart((cart) => [...cart, product])
+  }
   return (
     <div>
       <h1>Produtos em outro componente 1</h1>
@@ -17,6 +21,7 @@ const ComponenteSeparado1 = () => {
           return (
             <li>
               {product.name} - R${product.price}
+              <button onClick={() => addToCart(product)}>Adicionar</button>
             </li>
           );
         })}
