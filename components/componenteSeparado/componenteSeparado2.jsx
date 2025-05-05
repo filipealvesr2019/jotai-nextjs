@@ -6,9 +6,11 @@ const ComponenteSeparado2 = () => {
     const [cart, setCart] = useAtom(cartAtom)
    
     const addToCart = (product) => {
-      setCart((cart) => [...cart, product])
+      setCart((cart) => [...cart, product]);
+
 
     }
+    console.log('cart', cart)
     return (
        <div>
       <h1>Produtos em outro componente 2</h1>
