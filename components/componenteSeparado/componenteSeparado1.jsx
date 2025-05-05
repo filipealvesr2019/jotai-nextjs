@@ -21,7 +21,7 @@ const ComponenteSeparado1 = () => {
           return (
             <li>
               {product.name} - R${product.price}
-              <button onClick={() => addToCart(product)}>Adicionar</button>
+              <button onClick={() => addToCart(product)}>Adicionar ao Carinho</button>
             </li>
           );
         })}
