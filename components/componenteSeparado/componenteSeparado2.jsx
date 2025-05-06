@@ -18,9 +18,9 @@ const ComponenteSeparado2 = () => {
         display: "flex",
         flexDirection: "column"
       }}>
-        {products.map((product) => {
+        {products.map((product, index) => {
             return (
-                <li>
+                <li key={index}>
                     {product.name}-R${product.price}
                     <button onClick={() => addToCart(product)}>Adicionar ao Carinho</button>
                 </li>
