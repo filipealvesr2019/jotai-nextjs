@@ -9,6 +9,14 @@ export default function Carrinho(){
     }
     return (
         <div>
+            <h1>Seu Carrinho</h1>
+            {cart.length === 0 ? (
+                <p>O carrinho esta vazio</p>
+            ): (
+                <ul>
+                    
+                </ul>
+            )}
 
         </div>
     )
