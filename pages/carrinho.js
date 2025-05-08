@@ -14,7 +14,12 @@ export default function Carrinho(){
                 <p>O carrinho esta vazio</p>
             ): (
                 <ul>
-                    
+                    {cart.map((item, index) => {
+                        <li ke={index}>
+                            {item.name} - R$ {item.price}
+                            <button onClick={() => removeItem(index)}>Remover</button>
+                        </li>
+                    })}
                 </ul>
             )}
 
