@@ -12,7 +12,11 @@ const localStorageCartAtom = atom(() => {
 export const cartAtom = atom(
     (get) => get(localStorageCartAtom),
     (get, set, update) => {
-        const 
+        const newCart = typeof update === "function" ? update(get(localStorageCartAtom)) : update;
+        set(localStorageCartAtom, newCart);
+        if(typeof window !== "undefined"){
+            localStorage.setItem("cart", JSON.stringify(newCart));
+        }
     }
 )
 // export const cartAtom = atom([]); // array de produtos
