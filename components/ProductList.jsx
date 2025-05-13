@@ -20,8 +20,8 @@ const ProductList = () => {
      
     return (
         <div>
-        {products.map((product) => (
-            <span>
+        {products.map((product, index) => (
+            <span key={index}>
                 {product.name} - R$ {product.price}
             </span>
         ))}
