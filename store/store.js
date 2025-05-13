@@ -10,7 +10,13 @@ const localStorageCartAtom = atom(() => {
     return [];
 })
 
-const _cartAtom = atom((get) => get(localStorageCartAtom))
+const _cartAtom = atom((get) => get(localStorageCartAtom),
+         (get, set, newCart) => {
+            set(localStorageCartAtom, newCart)
+         }
+);
+
+
 export const cartAtom = atom(
     (get) => get(_cartAtom),
     (get, set, update) => {
