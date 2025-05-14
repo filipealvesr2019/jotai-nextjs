@@ -8,7 +8,13 @@ const localStorageCartAtom = atom(() => {
         return saved ? JSON.parse(saved) : [];
     }
     return [];
-})
+}, 
+(_get, _set, newCart) => {
+    if(typeof window !== "undefined"){
+        localStorage.setItem("cart", JSON.stringify(newCart))
+    }
+}
+)
 
 const _cartAtom = atom((get) => get(localStorageCartAtom),
          (get, set, newCart) => {
