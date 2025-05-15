@@ -1,3 +1,4 @@
+'use client'
 import { useAtom } from "jotai"
 import { cartAtom } from "../store/store"
 
@@ -14,12 +15,12 @@ export default function Carrinho(){
                 <p>O carrinho esta vazio</p>
             ): (
                 <ul>
-                    {cart.map((item, index) => {
-                        <li ke={index}>
+                    {cart.map((item, index) => (
+                        <li key={index}>
                             {item.name} - R$ {item.price}
                             <button onClick={() => removeItem(index)}>Remover</button>
                         </li>
-                    })}
+                    ))}
                 </ul>
             )}
 
