@@ -1,10 +1,17 @@
 'use client'
 import { useAtom } from "jotai"
 import { cartAtom } from "../store/store"
+import { useEffect, useState } from "react";
 
 export default function Carrinho(){
     const [cart, setCart] = useAtom(cartAtom);
+    const [hasMounted, setHasMounted] = useState(false);
 
+    useEffect(() => {
+        setHasMounted(true);
+    }, [])
+
+    if(!hasMounted) return null;
     const removeItem = (index) => {
         setCart((items) => items.filter((_, i) => i !== index));
     }
