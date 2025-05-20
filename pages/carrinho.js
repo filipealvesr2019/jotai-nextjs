@@ -12,6 +12,7 @@ export default function Carrinho(){
     }, [])
 
     if(!hasMounted) return null;
+    
     const removeItem = (index) => {
         setCart((items) => items.filter((_, i) => i !== index));
     }
