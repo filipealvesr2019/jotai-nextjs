@@ -2,6 +2,7 @@
 import { useAtom } from "jotai"
 import { cartAtom } from "../store/store"
 import { useEffect, useState } from "react";
+import Header from "../components/Header/Header";
 
 export default function Carrinho(){
     const [cart, setCart] = useAtom(cartAtom);
@@ -18,6 +19,7 @@ export default function Carrinho(){
     }
     return (
         <div>
+            <Header />
             <h1>Seu Carrinho</h1>
             {cart.length === 0 ? (
                 <p>O carrinho esta vazio</p>
